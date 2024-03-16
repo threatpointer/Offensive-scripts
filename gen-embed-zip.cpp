@@ -8,6 +8,26 @@
 //		cmd> cl.exe gen-embed-zip.cpp
 //
 
+/*
+This program creates an embed-zip LNK, which is a LNK shortcut file with appended ZIP archive.
+
+
+Usage
+
+```
+Usage: gen-embed-zip.exe <zip-path> <output-lnk-path> <what-to-run-in-zip> [icon-path]
+```
+
+Parameters:
+
+- `<zip-path>` - path to the .ZIP file containing our executable/document to be run after extracting it
+- `<output-lnk-path>` - where to save produced LNK
+- `<what-to-run-in-zip>` - A file that's in the .ZIP that will get executed as soon ZIP contents are extracted
+- `[icon-path]` - optional path to .ico or executable (exe/dll) containing an icon to be used (index=0)
+
+*/
+
+
 #include <stdio.h>
 #include <windows.h>
 
